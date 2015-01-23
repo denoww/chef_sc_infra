@@ -14,12 +14,13 @@ include_recipe 'apt'
 include_recipe 'git'
 include_recipe 'ruby_build'
 include_recipe 'rvm'
-include_recipe 'rvm::system'
+
 
 case enviroment
 when "production"
 when "staging"
 when "development"
+  include_recipe 'rvm::system'
   include_recipe 'rvm::vagrant'
 end
 
