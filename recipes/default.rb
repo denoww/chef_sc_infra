@@ -6,13 +6,24 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+enviroment        = node['sc_config']['enviroment']
+
+
 
 include_recipe 'apt'
 include_recipe 'git'
 include_recipe 'ruby_build'
 include_recipe 'rvm'
 include_recipe 'rvm::system'
-include_recipe 'rvm::vagrant'
+
+case enviroment
+when "production"
+when "staging"
+when "development"
+  include_recipe 'rvm::vagrant'
+end
+
+
 include_recipe 'rvm::gem_package'
 include_recipe 'vim'
 include_recipe 'nodejs'
