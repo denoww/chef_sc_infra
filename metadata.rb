@@ -1,4 +1,4 @@
-name             'sc_infra'
+name             'sc_infra_dev'
 maintainer       'YOUR_COMPANY_NAME'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
