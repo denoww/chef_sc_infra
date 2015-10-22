@@ -26,7 +26,6 @@ end
 
 
 include_recipe 'rvm::gem_package'
-include_recipe 'vim'
 include_recipe 'nodejs'
 include_recipe 'postgresql::server'
 include_recipe 'postgresql::client'
